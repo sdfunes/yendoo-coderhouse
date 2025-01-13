@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #364f6b;
+  font-family: 'Parkinsans', sans-serif;
+}
+
+body main section article{
+  text-align: center;
+}
+
+body main section article p {
+  background-color: blanchedalmond;
+}
+
+body main section span {
+  color:azure;
+  margin: 200px;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/img/logo-proyecto.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: right;
+}
+
+header nav li a {
+  color: darkgoldenrod;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.acciones {
+  text-align: center;
+}
+
+.acciones a {
+  color: blanchedalmond;
+}
+
+.form-registro {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-registro input {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.lista-viajes {
+  color: orangered;
+  background-color: burlywood;
+  width: 300px;
+  margin: 0 auto;
+}
