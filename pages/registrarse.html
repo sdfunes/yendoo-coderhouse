@@ -9,6 +9,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Registro</title>
   </head>
@@ -44,21 +45,43 @@
     </header>
     <main>
       <form action="#" method="POST">
-        <div class="form-registro">
-          <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" />
-          <label for="apellido">Apellido</label>
-          <input type="text" name="apellido" />
-          <label for="email">Email</label>
-          <input type="text" name="email" />
-          <label for="contrasenia">Contraseña</label>
-          <input type="password" name="contrasenia" />
-          <label for="repetir-contrasenia">Repetir Contraseña</label>
-          <input type="password" name="repetir-contrasenia" />
+        <div class="form-group row">
+          <div class="col-12 col-md-6">
+            <label class="col-form-label" for="nombre">Nombre</label>
+            <input class="form-control" type="text" name="nombre" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="col-form-label" for="apellido">Apellido</label>
+            <input class="form-control" type="text" name="apellido" />
+          </div>
+          <div class="col-12">
+            <label class="col-form-label" for="email">Email</label>
+            <input class="form-control" type="email" name="email" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="col-form-label" for="contrasenia">Contraseña</label>
+            <input class="form-control" type="password" name="contrasenia" />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="col-form-label" for="repetir-contrasenia"
+              >Repetir Contraseña</label
+            >
+            <input
+              class="form-control"
+              type="password"
+              name="repetir-contrasenia"
+            />
+          </div>
         </div>
-        <div class="acciones">
-          <a href="../index.html">Cancelar</a>
-          <input type="submit" value="Registrar" />
+        <div class="form-group row align-items-center acciones">
+          <div class="col-12 col-md-3 text-center text-md-left">
+            <a href="../index.html">Cancelar</a>
+          </div>
+          <div class="col-12 col-md-9 text-center text-md-right">
+            <button type="submit" class="btn login-btn w-50 m-0">
+              Registrar
+            </button>
+          </div>
         </div>
       </form>
     </main>

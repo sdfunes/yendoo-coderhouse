@@ -43,6 +43,13 @@ h1 {
   font-size: 2rem;
 }
 
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .acciones {
   text-align: center;
 }
@@ -66,10 +73,68 @@ h1 {
 .lista-viajes {
   color: orangered;
   background-color: burlywood;
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
 }
 
 .navbar ul li a {
   color: darkgoldenrod;
+}
+
+.col-form-label {
+  color: blanchedalmond;
+}
+
+.form-control.form-control-login {
+  border-radius: 5px;
+  color: #3a3b45;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.login-btn {
+  align-items: center;
+  border-radius: 50px;
+  color: #fff;
+  display: flex;
+  line-height: 32px;
+  margin: 15px 0;
+  padding: 0.4rem;
+  position: relative;
+}
+
+.login-btn:hover {
+  box-shadow: 0px 0px 5px #999;
+  color: white;
+}
+
+.login-btn.acciones {
+  background-color: blanchedalmond;
+  width: 200px;
+}
+
+.btn-info {
+  background-color: blanchedalmond !important;
+  color: black !important;
+}
+
+.btn-info:hover {
+  background-color: #364f6b !important;
+}
+
+.search-input {
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 21%;
+  left: 25px;
+  transform: translateY(-40%);
+  color: #888;
 }

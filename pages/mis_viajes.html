@@ -9,6 +9,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Mis Viajes</title>
   </head>
@@ -44,18 +45,49 @@
         </div>
       </nav>
       <h1>Mis Viajes</h1>
-      <input style="float: right" type="search" placeholder="Buscar Viajes" />
+      <!-- <input style="float: right" type="search" placeholder="Buscar Viajes" /> -->
+      <div class="row justify-content">
+        <div class="col-md-4">
+          <div class="search-container">
+            <input type="text" class="form-control search-input" placeholder="Buscar Viajes">
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <div class="lista-viajes">
-        <h3>Últimos Viajes</h3>
-        <ul>
-          <li>23/11/2025 06:30 - San Telmo a Retiro</li>
-          <li>23/11/2025 06:30 - San Telmo a Retiro</li>
-          <li>23/11/2025 06:30 - San Telmo a Retiro</li>
-          <li>23/11/2025 06:30 - San Telmo a Retiro</li>
-          <li>23/11/2025 06:30 - San Telmo a Retiro</li>
-        </ul>
+        <h2>Últimos Viajes</h2>
+        <table class="table table-striped">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Fecha-Hora</th>
+              <th scope="col">Origen</th>
+              <th scope="col">Destino</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>23/11/2025 06:30</td>
+              <td>San Telmo</td>
+              <td>Retiro</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>23/11/2025 06:30</td>
+              <td>San Telmo</td>
+              <td>Retiro</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>23/11/2025 06:30</td>
+              <td>San Telmo</td>
+              <td>Retiro</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="acciones">
         <a href="./home.html">Volver</a>
