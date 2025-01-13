@@ -10,7 +10,7 @@ body {
   font-family: 'Parkinsans', sans-serif;
 }
 
-body main section article{
+body main section article {
   text-align: center;
 }
 
@@ -19,7 +19,7 @@ body main section article p {
 }
 
 body main section span {
-  color:azure;
+  color: azure;
   margin: 200px;
 }
 
@@ -68,4 +68,8 @@ h1 {
   background-color: burlywood;
   width: 300px;
   margin: 0 auto;
+}
+
+.navbar ul li a {
+  color: darkgoldenrod;
 }
