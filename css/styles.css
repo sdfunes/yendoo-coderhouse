@@ -14,7 +14,7 @@ body main section article {
   text-align: center;
 }
 
-body main section article p {
+body main section p {
   background-color: blanchedalmond;
 }
 
@@ -75,6 +75,10 @@ h2 {
   background-color: burlywood;
   width: 500px;
   margin: 0 auto;
+}
+
+.card-body {
+  background-color: blanchedalmond;
 }
 
 .navbar ul li a {
