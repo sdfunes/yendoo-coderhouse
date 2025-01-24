@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #364f6b;
   font-family: 'Parkinsans', sans-serif;
+  background-image: linear-gradient(to bottom, #364f6b 70%, #2e4d6f);
 }
 
 body main section article {
