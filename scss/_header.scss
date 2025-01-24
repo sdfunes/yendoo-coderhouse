@@ -1,0 +1,22 @@
+.logo {
+  width: 200px;
+  height: 200px;
+  background-image: url('../assets/img/logo-proyecto.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: right;
+}
+
+header nav li a {
+  color: darkgoldenrod;
+}
+
+.navbar {
+  ul {
+    li {
+      a {
+        color: darkgoldenrod;
+      }
+    }
+  }
+}

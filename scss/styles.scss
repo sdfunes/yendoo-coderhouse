@@ -1,4 +1,140 @@
-@import "variables";
-h1{
-    color:green;
+@import 'variables';
+@import 'header';
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+body {
+  font-family: 'Parkinsans', sans-serif;
+  background-image: linear-gradient(to bottom, $color-fondo 70%, #2e4d6f);
+  main {
+    section {
+      p {
+        background-color: $body-color;
+      }
+
+      article {
+        text-align: center;
+      }
+
+      span {
+        color: azure;
+        margin: 200px;
+      }
+    }
+  }
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.acciones {
+  text-align: center;
+  a {
+    color: $body-color;
+  }
+}
+
+.form-registro {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  input {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.lista-viajes {
+  color: orangered;
+  background-color: burlywood;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.card {
+  @include border-radius(20px);
+}
+
+.card-body {
+  background-color: $body-color;
+  @include border-radius(20px);
+}
+
+.col-form-label {
+  color: $body-color;
+}
+
+.form-control.form-control-login {
+  @include border-radius(5px);
+  color: #3a3b45;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.login-btn {
+  align-items: center;
+  @include border-radius(50px);
+  color: #fff;
+  display: flex;
+  line-height: 32px;
+  margin: 15px 0;
+  padding: 0.4rem;
+  position: relative;
+}
+
+.login-btn:hover {
+  box-shadow: 0px 0px 5px #999;
+  color: white;
+}
+
+.login-btn.acciones {
+  background-color: $body-color;
+  width: 200px;
+}
+
+.btn-info {
+  background-color: $body-color !important;
+  color: black !important;
+}
+
+.btn-info:hover {
+  background-color: $color-fondo !important;
+}
+
+.search-input {
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 21%;
+  left: 25px;
+  transform: translateY(-40%);
+  color: #888;
 }

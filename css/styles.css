@@ -1,32 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Parkinsans', sans-serif;
-  background-image: linear-gradient(to bottom, #364f6b 70%, #2e4d6f);
-}
-
-body main section article {
-  text-align: center;
-}
-
-body main section p {
-  background-color: blanchedalmond;
-}
-
-body main section span {
-  color: azure;
-  margin: 200px;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 .logo {
   width: 200px;
   height: 200px;
-  background-image: url('../assets/img/logo-proyecto.png');
+  background-image: url("../assets/img/logo-proyecto.png");
   background-repeat: no-repeat;
   background-size: contain;
   float: right;
@@ -34,6 +10,31 @@ body main section span {
 
 header nav li a {
   color: darkgoldenrod;
+}
+
+.navbar ul li a {
+  color: darkgoldenrod;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Parkinsans", sans-serif;
+  background-image: linear-gradient(to bottom, #364f6b 70%, #2e4d6f);
+}
+body main section p {
+  background-color: blanchedalmond;
+}
+body main section article {
+  text-align: center;
+}
+body main section span {
+  color: azure;
+  margin: 200px;
 }
 
 h1 {
@@ -53,7 +54,6 @@ h2 {
 .acciones {
   text-align: center;
 }
-
 .acciones a {
   color: blanchedalmond;
 }
@@ -64,7 +64,6 @@ h2 {
   flex-direction: column;
   text-align: center;
 }
-
 .form-registro input {
   width: 300px;
   margin: 0 auto;
@@ -77,12 +76,13 @@ h2 {
   margin: 0 auto;
 }
 
-.card-body {
-  background-color: blanchedalmond;
+.card {
+  border-radius: 20px;
 }
 
-.navbar ul li a {
-  color: darkgoldenrod;
+.card-body {
+  background-color: blanchedalmond;
+  border-radius: 20px;
 }
 
 .col-form-label {
@@ -142,3 +142,5 @@ h2 {
   transform: translateY(-40%);
   color: #888;
 }
+
+/*# sourceMappingURL=styles.css.map */
