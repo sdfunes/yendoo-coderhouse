@@ -1,5 +1,7 @@
+@import 'funciones';
 @import 'variables';
 @import 'header';
+@import 'search';
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 * {
@@ -8,13 +10,9 @@
   box-sizing: border-box;
 }
 
-@mixin border-radius($radius) {
-  border-radius: $radius;
-}
-
 body {
   font-family: 'Parkinsans', sans-serif;
-  background-image: linear-gradient(to bottom, $color-fondo 70%, #2e4d6f);
+  background-image: linear-gradient(to bottom, $color-fondo 65%, #2e4d6f);
   main {
     section {
       p {
@@ -34,17 +32,15 @@ body {
 }
 
 h1 {
-  color: white;
-  text-align: center;
-  font-weight: 600;
-  font-size: 2rem;
+  @include titulos(white, center, 400, 2rem);
 }
 
 h2 {
-  color: white;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1rem;
+  @include titulos(white, center, 400, 1rem);
+}
+
+h3 {
+  @include titulos(white, left, 400, 0.7rem);
 }
 
 .acciones {
@@ -121,20 +117,4 @@ h2 {
 
 .btn-info:hover {
   background-color: $color-fondo !important;
-}
-
-.search-input {
-  height: 40px;
-  border-radius: 30px;
-  padding-left: 35px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.search-icon {
-  position: absolute;
-  top: 21%;
-  left: 25px;
-  transform: translateY(-40%);
-  color: #888;
 }

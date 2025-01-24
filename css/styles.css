@@ -16,6 +16,22 @@ header nav li a {
   color: darkgoldenrod;
 }
 
+.search-input {
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 35px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  top: 21%;
+  left: 25px;
+  transform: translateY(-40%);
+  color: #888;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +40,7 @@ header nav li a {
 
 body {
   font-family: "Parkinsans", sans-serif;
-  background-image: linear-gradient(to bottom, #364f6b 70%, #2e4d6f);
+  background-image: linear-gradient(to bottom, #364f6b 65%, #2e4d6f);
 }
 body main section p {
   background-color: blanchedalmond;
@@ -40,7 +56,7 @@ body main section span {
 h1 {
   color: white;
   text-align: center;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2rem;
 }
 
@@ -49,6 +65,13 @@ h2 {
   text-align: center;
   font-weight: 400;
   font-size: 1rem;
+}
+
+h3 {
+  color: white;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.7rem;
 }
 
 .acciones {
@@ -125,22 +148,6 @@ h2 {
 
 .btn-info:hover {
   background-color: #364f6b !important;
-}
-
-.search-input {
-  height: 40px;
-  border-radius: 30px;
-  padding-left: 35px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.search-icon {
-  position: absolute;
-  top: 21%;
-  left: 25px;
-  transform: translateY(-40%);
-  color: #888;
 }
 
 /*# sourceMappingURL=styles.css.map */

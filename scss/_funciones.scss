@@ -1,0 +1,10 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin titulos($color, $align, $weight, $size) {
+  color: $color;
+  text-align: $align;
+  font-weight: $weight;
+  font-size: $size;
+}
