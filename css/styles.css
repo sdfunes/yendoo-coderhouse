@@ -16,6 +16,10 @@ header nav li a {
   color: darkgoldenrod;
 }
 
+.navbar-toggler-icon {
+  background-color: darkgoldenrod;
+}
+
 .search-input {
   height: 40px;
   border-radius: 30px;
@@ -26,7 +30,7 @@ header nav li a {
 
 .search-icon {
   position: absolute;
-  top: 21%;
+  top: 25%;
   left: 25px;
   transform: translateY(-40%);
   color: #888;

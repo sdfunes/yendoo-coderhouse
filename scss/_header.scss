@@ -7,16 +7,26 @@
   float: right;
 }
 
-header nav li a {
-  color: darkgoldenrod;
+header {
+    nav {
+        li{
+            a{
+                color: $color-menu;
+            }
+        }
+    }
 }
 
 .navbar {
   ul {
     li {
       a {
-        color: darkgoldenrod;
+        color: $color-menu;
       }
     }
   }
+}
+
+.navbar-toggler-icon {
+  background-color: $color-menu;
 }
