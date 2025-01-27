@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Mis Viajes</title>
+    <title>Saldo Kilómetros</title>
   </head>
   <body>
     <header>
@@ -43,14 +43,16 @@
                 >Home <span class="sr-only"></span
               ></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./saldo_kms.html">Saldo Kms.</a>
-            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Mis viajes</a>
+              <a class="nav-link" href="#">Saldo Kms.</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./cargar_kms.html">Cargar Kms.</a>
+              <a class="nav-link" href="./mis_viajes.html">Mis viajes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./cargar_kms.html"
+                >Cargar Kms.</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.html">Cerrar Sesión</a>
@@ -58,56 +60,21 @@
           </ul>
         </div>
       </nav>
-      <h1>Mis Viajes</h1>
-      <div class="row justify-content">
-        <div class="col-12 col-md-4">
-          <div class="input-group search-container">
-            <input
-              type="text"
-              class="form-control search-input"
-              placeholder="Buscar Viajes"
-            />
+      <h1>Saldo Kilómetros</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <label style="color: white">Saldo:</label>
+            <label class="ml-2 saldokms">1000 Kms.</label>
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <div class="lista-viajes">
-        <h2>Últimos Viajes</h2>
-        <table class="table table-striped">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Fecha-Hora</th>
-              <th scope="col">Origen</th>
-              <th scope="col">Destino</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="acciones">
-        <a href="./home.html">Volver</a>
-        <a href="#">Ver más Viajes</a>
+      <div class="form-group row align-items-center acciones">
+        <div class="col-12 col-md-12 text-center text-md-left">
+          <a href="./home.html">Volver</a>
+        </div>
       </div>
     </main>
     <footer class="text-white mt-5 p-4 text-left">

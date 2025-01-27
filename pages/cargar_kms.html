@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Mis Viajes</title>
+    <title>Cargar Kilómetros</title>
   </head>
   <body>
     <header>
@@ -46,11 +46,11 @@
             <li class="nav-item">
               <a class="nav-link" href="./saldo_kms.html">Saldo Kms.</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Mis viajes</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./mis_viajes.html">Mis viajes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./cargar_kms.html">Cargar Kms.</a>
+              <a class="nav-link active" href="#">Cargar Kms.</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../index.html">Cerrar Sesión</a>
@@ -58,56 +58,37 @@
           </ul>
         </div>
       </nav>
-      <h1>Mis Viajes</h1>
-      <div class="row justify-content">
-        <div class="col-12 col-md-4">
-          <div class="input-group search-container">
-            <input
-              type="text"
-              class="form-control search-input"
-              placeholder="Buscar Viajes"
-            />
-          </div>
-        </div>
-      </div>
+      <h1>Cargar Kilómetros</h1>
     </header>
     <main>
-      <div class="lista-viajes">
-        <h2>Últimos Viajes</h2>
-        <table class="table table-striped">
-          <thead class="thead-light">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Fecha-Hora</th>
-              <th scope="col">Origen</th>
-              <th scope="col">Destino</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>23/11/2025 06:30</td>
-              <td>San Telmo</td>
-              <td>Retiro</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <label style="color:white" for="kmsInput">Kilómetros a cargar:</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <input type="text" id="kmsInput" class="form-control" maxlength="3" value="0" />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+        </div>
       </div>
-      <div class="acciones">
-        <a href="./home.html">Volver</a>
-        <a href="#">Ver más Viajes</a>
+      <div class="form-group row align-items-center acciones">
+        <div class="col-6 col-md-3 text-center text-md-left">
+          <a href="./home.html">Volver</a>
+        </div>
+        <div class="col-6 col-md-9 text-center text-md-right">
+          <button type="submit" class="btn login-btn w-50 m-0">
+            Cargar
+          </button>
+        </div>
       </div>
     </main>
     <footer class="text-white mt-5 p-4 text-left">
