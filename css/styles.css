@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 .logo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 100px;
   background-image: url("../assets/img/logo-proyecto.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -29,8 +29,8 @@ header nav li a {
 }
 
 .search-icon {
-  position: absolute;
-  top: 25%;
+  position: fixed;
+  top: 21%;
   left: 25px;
   transform: translateY(-40%);
   color: #888;
