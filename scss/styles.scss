@@ -13,7 +13,11 @@
 body {
   font-family: 'Parkinsans', sans-serif;
   background-image: linear-gradient(to bottom, $color-fondo 65%, #2e4d6f);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   main {
+    flex: 1;
     section {
       p {
         background-color: $body-color;
@@ -28,6 +32,11 @@ body {
         margin: 200px;
       }
     }
+  }
+  footer {
+    background-color: #2e4d6f;
+    color: white;
+    padding: 20px 0;
   }
 }
 
