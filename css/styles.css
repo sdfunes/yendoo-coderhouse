@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 .logo {
   width: 150px;
-  height: 100px;
+  height: 75px;
   background-image: url("../assets/img/logo-proyecto.png");
   background-repeat: no-repeat;
   background-size: contain;
   float: right;
 }
 
+header {
+  background-color: #364f6b;
+}
 header nav li a {
   color: darkgoldenrod;
 }
@@ -68,6 +71,14 @@ body footer {
   padding: 20px 0;
 }
 
+.bg-image {
+  background-image: url("../assets/img/fondo-app.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 h1 {
   color: white;
   text-align: center;
@@ -114,13 +125,9 @@ h3 {
   margin: 0 auto;
 }
 
-.card {
-  border-radius: 20px;
-}
-
 .card-body {
-  background-color: blanchedalmond;
-  border-radius: 20px;
+  color: rgb(203, 203, 100);
+  font-size: 0.5rem !important;
 }
 
 .col-form-label {
@@ -189,6 +196,32 @@ h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+.quote-wrapper {
+  width: 200px;
+  height: 200px;
+  background-color: #364f6b;
+  text-align: left;
+}
+
+.text {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(square at center, #364f6b 0%, #364f6b 70%, rgba(0, 128, 172, 0) 70.3%);
+  margin: 0;
+  color: white;
+}
+
+@media (min-width: 850px) {
+  .quote-wrapper {
+    width: 280px;
+    height: 210px;
+    text-align: left;
+  }
+  .text span {
+    font-size: 10px;
+    text-align: left;
   }
 }
 

@@ -1,6 +1,6 @@
 .logo {
   width: 150px;
-  height: 100px;
+  height: 75px;
   background-image: url('../assets/img/logo-proyecto.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -8,13 +8,14 @@
 }
 
 header {
-    nav {
-        li{
-            a{
-                color: $color-menu;
-            }
-        }
+  background-color: #364f6b;
+  nav {
+    li {
+      a {
+        color: $color-menu;
+      }
     }
+  }
 }
 
 .navbar {
