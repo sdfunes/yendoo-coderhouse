@@ -83,9 +83,14 @@ h1 {
   color: white;
   text-align: center;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
+@media (min-width: 570px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 h2 {
   color: white;
   text-align: center;
@@ -184,12 +189,26 @@ h3 {
   color: #007bff;
 }
 
+.label-saldo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
 .saldokms {
   color: white;
   opacity: 0;
   animation: saldokms_animation 5s infinite;
+  font-size: 2rem;
 }
 
+@media (min-width: 570px) {
+  .saldokms {
+    font-size: 1.5rem;
+  }
+}
 @keyframes saldokms_animation {
   0% {
     opacity: 0;
@@ -246,6 +265,17 @@ h3 {
     flex-direction: column;
     text-align: center;
   }
+}
+.fondo-saldo {
+  background-image: url("../assets/img/fondo-saldo-kms.webp"); /* Update the path to your image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=styles.css.map */
