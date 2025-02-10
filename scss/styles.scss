@@ -195,71 +195,6 @@ h3 {
   color: white;
 }
 
-// .text span {
-//   height: 50%;
-//   font-size: 90px;
-//   line-height: 1;
-//   padding: 0;
-//   text-align: center;
-//   font-style: italic;
-//   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
-// }
-
-// .text::before {
-//   content: "";
-//   width: 50%;
-//   height: 50%;
-//   float: left;
-//   shape-outside: polygon(
-//     0 0,
-//     98% 0,
-//     50% 6%,
-//     23.4% 17.3%,
-//     6% 32.6%,
-//     0 50%,
-//     6% 65.6%,
-//     23.4% 82.7%,
-//     50% 94%,
-//     98% 100%,
-//     0 100%
-//   );
-//   shape-margin: 7%;
-// }
-
-// .text span::before {
-//   width: 50%;
-//   height: 100%;
-//   float: right;
-//   shape-outside: polygon(
-//     2% 0%,
-//     100% 0%,
-//     100% 100%,
-//     2% 100%,
-//     50% 94%,
-//     76.6% 82.7%,
-//     94% 65.6%,
-//     100% 50%,
-//     94% 32.6%,
-//     76.6% 17.3%,
-//     50% 6%
-//   );
-//   shape-margin: 7%;
-// }
-
-// .quote-wrapper::before {
-//   font-size: 270px;
-//   height: 82px;
-//   line-height: 0.78;
-//   line-height: 1;
-//   position: absolute;
-//   top: -48px;
-//   left: 0;
-//   z-index: 1;
-//   font-family: sans-serif, serif;
-//   color: #ccc;
-//   opacity: 0.9;
-// }
-
 @media (min-width: 850px) {
   .quote-wrapper {
     width: 280px;
@@ -267,12 +202,32 @@ h3 {
     text-align: left;
   }
 
-  // .quote-wrapper::before {
-  //   font-size: 100px;
-  // }
-
   .text span {
     font-size: 10px;
     text-align: left;
+  }
+}
+
+.pasos .media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pasos .media img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pasos .media-body {
+  flex: 1;
+  padding: 10px;
+  color: $color-letras;
+}
+
+@media (max-width: 768px) {
+  .pasos .media {
+    flex-direction: column;
+    text-align: center;
   }
 }

@@ -224,5 +224,28 @@ h3 {
     text-align: left;
   }
 }
+.pasos .media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pasos .media img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pasos .media-body {
+  flex: 1;
+  padding: 10px;
+  color: rgb(203, 203, 100);
+}
+
+@media (max-width: 768px) {
+  .pasos .media {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
