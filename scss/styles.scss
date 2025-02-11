@@ -2,6 +2,14 @@
 @import 'variables';
 @import 'header';
 @import 'search';
+@import 'acciones';
+@import 'registro';
+@import 'mis-viajes';
+@import 'login';
+@import 'saldo';
+@import 'cargar-kms';
+@import 'inicio';
+
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
 
 * {
@@ -40,14 +48,6 @@ body {
   }
 }
 
-.bg-image {
-  background-image: url('../assets/img/fondo-app.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
 h1 {
   @include titulos(white, center, 400, 3rem);
 }
@@ -64,188 +64,4 @@ h2 {
 
 h3 {
   @include titulos(white, left, 400, 0.7rem);
-}
-
-.acciones {
-  text-align: center;
-  a {
-    color: $body-color;
-  }
-}
-
-.form-registro {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  input {
-    width: 300px;
-    margin: 0 auto;
-  }
-}
-
-.lista-viajes {
-  color: orangered;
-  background-color: burlywood;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.card-body {
-  color: $color-letras;
-  font-size: 0.5rem !important;
-}
-
-.col-form-label {
-  color: $body-color;
-}
-
-.form-control.form-control-login {
-  @include border-radius(5px);
-  color: #3a3b45;
-  font-size: 0.9rem;
-  padding: 0.8rem;
-  margin-bottom: 5px;
-}
-
-.login-btn {
-  align-items: center;
-  @include border-radius(50px);
-  color: #fff;
-  display: flex;
-  line-height: 32px;
-  margin: 15px 0;
-  padding: 0.4rem;
-  position: relative;
-}
-
-.login-btn:hover {
-  box-shadow: 0px 0px 5px #999;
-  color: white;
-}
-
-.login-btn.acciones {
-  background-color: $body-color;
-  width: 200px;
-}
-
-.btn-info {
-  background-color: $body-color !important;
-  color: black !important;
-}
-
-.btn-info:hover {
-  background-color: $color-fondo !important;
-}
-
-.counter {
-  font-size: 14px;
-  color: #555;
-  margin-top: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.counter.animate {
-  transform: scale(1.2);
-  color: #007bff;
-}
-
-.label-saldo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
-  text-align: center;
-}
-
-.saldokms {
-  color: white;
-  opacity: 0;
-  animation: saldokms_animation 5s infinite;
-  font-size: 2rem;
-}
-
-@media (min-width: 570px) {
-  .saldokms {
-    font-size: 1.5rem;
-  }
-}
-
-@keyframes saldokms_animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-.quote-wrapper {
-  width: 200px;
-  height: 200px;
-  background-color: $color-fondo;
-  text-align: left;
-}
-
-.text {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    square at center,
-    $color-fondo 0%,
-    $color-fondo 70%,
-    rgba(0, 128, 172, 0) 70.3%
-  );
-  margin: 0;
-  color: white;
-}
-
-@media (min-width: 850px) {
-  .quote-wrapper {
-    width: 280px;
-    height: 210px;
-    text-align: left;
-  }
-
-  .text span {
-    font-size: 10px;
-    text-align: left;
-  }
-}
-
-.pasos .media {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.pasos .media img {
-  max-width: 100%;
-  height: auto;
-}
-
-.pasos .media-body {
-  flex: 1;
-  padding: 10px;
-  color: $color-letras;
-}
-
-@media (max-width: 768px) {
-  .pasos .media {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.fondo-saldo {
-  background-image: url('../assets/img/fondo-saldo-kms.webp'); /* Update the path to your image */
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 20px;
-  border-radius: 10px;
-  min-height: 100vh;
-  width: 100%;
-  box-sizing: border-box;
 }

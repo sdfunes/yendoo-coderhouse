@@ -1,0 +1,14 @@
+.form-registro {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  input {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.col-form-label {
+  color: $body-color;
+}

@@ -1,0 +1,41 @@
+.label-saldo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.saldokms {
+  color: white;
+  opacity: 0;
+  animation: saldokms_animation 5s infinite;
+  font-size: 2rem;
+}
+
+@media (min-width: 570px) {
+  .saldokms {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes saldokms_animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fondo-saldo {
+  background-image: url('../assets/img/fondo-saldo-kms.webp'); /* Update the path to your image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}

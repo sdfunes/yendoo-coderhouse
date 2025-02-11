@@ -1,0 +1,37 @@
+.form-control.form-control-login {
+  @include border-radius(5px);
+  color: #3a3b45;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.login-btn {
+  align-items: center;
+  @include border-radius(50px);
+  color: #fff;
+  display: flex;
+  line-height: 32px;
+  margin: 15px 0;
+  padding: 0.4rem;
+  position: relative;
+}
+
+.login-btn:hover {
+  box-shadow: 0px 0px 5px #999;
+  color: white;
+}
+
+.login-btn.acciones {
+  background-color: $body-color;
+  width: 200px;
+}
+
+.btn-info {
+  background-color: $body-color !important;
+  color: black !important;
+}
+
+.btn-info:hover {
+  background-color: $color-fondo !important;
+}
