@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @import 'funciones';
 @import 'variables';
 @import 'header';
@@ -11,12 +17,6 @@
 @import 'inicio';
 
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: 'Parkinsans', sans-serif;

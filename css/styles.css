@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .logo {
   width: 150px;
   height: 75px;
@@ -234,12 +240,6 @@ header nav li a {
     margin-right: auto;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Parkinsans", sans-serif;
   background-image: linear-gradient(to bottom, #364f6b 65%, #2e4d6f);
