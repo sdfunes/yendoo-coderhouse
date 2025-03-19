@@ -14,7 +14,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
-    <script async src="../assets/js/registrarse.js" crossorigin="anonymous"></script>
+    <script
+      async
+      src="../assets/js/registrarse.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Yendoo APP | Registro de Usuario</title>
   </head>
   <body id="registrarse">
@@ -45,7 +49,9 @@
               ></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Registrarse</a>
+              <a class="nav-link" href="#" onclick="modalRegistro()"
+                >Registrarse</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./login.html">Login</a>
@@ -62,7 +68,7 @@
     </header>
     <main>
       <!--SIMULO UN POST AL LOGIN LUEGO DEL OK DEL REGISTRO-->
-      <form action="./login.html" method="GET">
+      <form method="POST">
         <div class="form-group row">
           <div class="col-12 col-md-6">
             <label class="col-form-label" for="nombre">Nombre</label>
@@ -98,6 +104,7 @@
               class="form-control"
               type="password"
               name="repetir-contrasenia"
+              id="contrasenia2"
             />
           </div>
         </div>
@@ -106,12 +113,48 @@
             <a href="../index.html">Cancelar</a>
           </div>
           <div class="col-6 col-md-9 text-center text-md-right">
-            <button type="submit" class="btn login-btn w-50 m-0">
+            <button type="button" class="btn login-btn w-50 m-0" onclick="registroModal()">
               Registrar
             </button>
           </div>
         </div>
       </form>
+      <div
+        class="modal fade"
+        id="confirmModal"
+        tabindex="-1"
+        aria-labelledby="confirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              ¿Estás seguro de que querés registrarte en la APP?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-primary" id="confirmButton" onclick="registrarUsuario()">
+                Confirmar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="text-white mt-5 p-4 text-center">
       <div class="container">

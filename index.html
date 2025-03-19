@@ -193,9 +193,78 @@
             </a>
           </div>
           <div class="col-md-4">
-            <a onclick="mostrarPreguntasFrecuentes()" class="text-white mx-2">
+            <a
+              href="#"
+              class="text-white mx-2"
+              data-bs-toggle="modal"
+              data-bs-target="#faqModal"
+            >
               <i class="fa-solid fa-info"></i> Preguntas Frecuentes
             </a>
+          </div>
+          <div
+            class="modal fade"
+            id="faqModal"
+            tabindex="-1"
+            aria-labelledby="faqModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg modal-preguntas">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="faqModalLabel">
+                    Preguntas Frecuentes
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <h6>¿Qué es Yendoo?</h6>
+                  <p>
+                    Yendoo es una billetera virtual que te permite cargar
+                    kilómetros y viajar por la Ciudad de Buenos Aires de manera
+                    sencilla.
+                  </p>
+                  <h6>¿Cómo funciona?</h6>
+                  <p>
+                    Solo necesitas escanear el código QR en el transporte
+                    público y los kilómetros correspondientes se descontarán
+                    automáticamente.
+                  </p>
+                  <h6>¿Cómo me registro a la APP?</h6>
+                  <p>
+                    Para registrarte en la APP debes dirigirte a la opción de
+                    "Registrarse" y allí podrás completar tus datos para
+                    registrarte.
+                  </p>
+                  <h6>¿Cómo ingreso a la aplicación?</h6>
+                  <p>
+                    Para ingresar a la aplicación debes dirigirte a la opción de
+                    "Login" e ingresar tu usuario y contraseña con los que te
+                    registraste.
+                  </p>
+                  <h6>¿Cómo cargo kilómetros?</h6>
+                  <p>
+                    Para cargar kilómetros debes dirigirte a la opción de
+                    "Cargar Kilómetros", ingresar la cantidad y seleccionar un
+                    modo de pago.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

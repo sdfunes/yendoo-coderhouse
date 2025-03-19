@@ -67,6 +67,10 @@ header nav li a {
   color: blanchedalmond;
 }
 
+.modal-preguntas {
+  color: black;
+}
+
 .lista-viajes {
   color: orangered;
   background-color: burlywood;

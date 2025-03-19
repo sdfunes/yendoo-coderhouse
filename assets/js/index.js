@@ -59,7 +59,7 @@ function selectOption(option) {
 }
 
 function suscribirseAlNewsletter() {
-  let emailGuardado = localStorage.getItem('email');
+  const emailGuardado = localStorage.getItem('email');
   if (!emailGuardado && confirm('¿Desea suscribirse a nuestro newsletter?')) {
     let email = prompt('Ingrese su email');
     if (email) {
@@ -70,7 +70,7 @@ function suscribirseAlNewsletter() {
 }
 
 function mostrarPreguntasFrecuentes() {
-  let preguntas = [
+  const preguntas = [
     {
       pregunta: '¿Cómo me registro a la APP?',
       respuesta:
