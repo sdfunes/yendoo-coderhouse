@@ -14,9 +14,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script async src="../assets/js/registrarse.js" crossorigin="anonymous"></script>
     <title>Yendoo APP | Registro de Usuario</title>
   </head>
-  <body>
+  <body id="registrarse">
     <header>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -65,19 +66,29 @@
         <div class="form-group row">
           <div class="col-12 col-md-6">
             <label class="col-form-label" for="nombre">Nombre</label>
-            <input class="form-control" type="text" name="nombre" />
+            <input class="form-control" type="text" name="nombre" id="nombre" />
           </div>
           <div class="col-12 col-md-6">
             <label class="col-form-label" for="apellido">Apellido</label>
-            <input class="form-control" type="text" name="apellido" />
+            <input
+              class="form-control"
+              type="text"
+              name="apellido"
+              id="apellido"
+            />
           </div>
           <div class="col-12">
             <label class="col-form-label" for="email">Email</label>
-            <input class="form-control" type="email" name="email" />
+            <input class="form-control" type="email" name="email" id="email" />
           </div>
           <div class="col-12 col-md-6">
             <label class="col-form-label" for="contrasenia">Contraseña</label>
-            <input class="form-control" type="password" name="contrasenia" />
+            <input
+              class="form-control"
+              type="password"
+              name="contrasenia"
+              id="contrasenia"
+            />
           </div>
           <div class="col-12 col-md-6">
             <label class="col-form-label" for="repetir-contrasenia"
