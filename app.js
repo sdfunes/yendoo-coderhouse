@@ -3,42 +3,67 @@ window.onload = function () {
   suscribirseAlNewsletter();
 };
 
-function descargarApp() {
+let selectedOption = null;
+async function descargarApp() {
   let salir = false;
   let arraySistemas = ['Android', 'iOS', 'Otro'];
+  let contador_intentos = 0;
   while (!salir) {
-    let opcion = prompt(
-      'Indique su Sistema Operativo para descargar la app: 0-Android, 1-iOS, 2-Otro S.O., 3-Cancelar'
-    );
-    let mensaje = 'Descargando app para ';
-    if (!opcion) {
+    if (contador_intentos > 3) {
+      salir = true;
       alert(
-        'Debe indicar una opción de descarga. Caso contrario marque 3 para cancelar'
+        'Ha superado el número de intentos permitidos para descargar la app'
       );
-    } else {
-      switch (opcion) {
-        case '0':
-        case '1':
-        case '2':
-          mensaje += arraySistemas[opcion];
-          salir = true;
-          break;
-        case '3':
-          return;
-        default:
-          mensaje = 'Opción inválida';
-          salir = false;
-          break;
-      }
-      alert(mensaje);
+      continue;
     }
+    const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
+    modal.show();
+    selectedOption = null;
+    await new Promise((resolve) => {
+      const interval = setInterval(() => {
+        if (selectedOption !== null) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, 100);
+    });
+
+    let mensaje = 'Descargando app para ';
+
+    switch (selectedOption) {
+      case 0:
+      case 1:
+      case 2:
+        mensaje += arraySistemas[selectedOption];
+        salir = true;
+        break;
+      case 3:
+        salir = true;
+        continue;
+      default:
+        mensaje = 'Opción inválida';
+        salir = false;
+        break;
+    }
+    contador_intentos++;
+    alert(mensaje);
   }
 }
 
+function selectOption(option) {
+  selectedOption = option;
+  const modal = bootstrap.Modal.getInstance(
+    document.getElementById('downloadModal')
+  );
+  modal.hide();
+}
+
 function suscribirseAlNewsletter() {
-  if (confirm('¿Desea suscribirse a nuestro newsletter?')) {
+  let emailGuardado = localStorage.getItem('email');
+  if (!emailGuardado && confirm('¿Desea suscribirse a nuestro newsletter?')) {
     let email = prompt('Ingrese su email');
     if (email) {
+      localStorage.setItem('email', email);
       alert('Gracias por suscribirse a nuestro newsletter');
     }
   }
