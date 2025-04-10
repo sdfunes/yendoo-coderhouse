@@ -11,9 +11,15 @@ function registroModal() {
     modal.show();
   } else {
     if (!validarFormRegistro()) {
-      alert('Debe completar todos los campos');
+      Swal.fire({
+        icon: 'error',
+        title: 'Debe completar todos los campos',
+      });
     } else {
-      alert('Las contraseñas no coinciden');
+      Swal.fire({
+        icon: 'error',
+        title: 'Las contraseñas no coinciden',
+      });
     }
   }
 }
@@ -34,7 +40,10 @@ function validarContrasenias() {
 }
 
 function registrarUsuario() {
-  alert('Usuario registrado correctamente');
+  Swal.fire({
+    icon: 'success',
+    title: 'Usuario registrado correctamente',
+  });
   const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
   modal.hide();
   window.location.href = './login.html';

@@ -3,30 +3,37 @@ window.onload = function () {
   suscribirseAlNewsletter();
 };
 
+document.querySelector('.btn.btn-info').addEventListener('click', async () => {
+  try {
+    await descargarApp();
+    console.log('La descarga ha comenzado.');
+  } catch (error) {
+    console.error('Hubo un problema al iniciar la descarga:', error);
+  }
+});
+
 let selectedOption = null;
+
 async function descargarApp() {
   let salir = false;
   let arraySistemas = ['Android', 'iOS', 'Otro'];
   let contador_intentos = 0;
+
+  const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
   while (!salir) {
     if (contador_intentos > 3) {
       salir = true;
-      alert(
-        'Ha superado el número de intentos permitidos para descargar la app'
-      );
-      continue;
+      await Swal.fire({
+        icon: 'error',
+        title: 'Límite de intentos alcanzado',
+        text: 'Ha superado el número de intentos permitidos para descargar la app.',
+      });
+      break;
     }
-    const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
+
     modal.show();
-    selectedOption = null;
-    await new Promise((resolve) => {
-      const interval = setInterval(() => {
-        if (selectedOption !== null) {
-          clearInterval(interval);
-          resolve();
-        }
-      }, 100);
-    });
+    let selectedOption = await esperandoSeleccion();
+    modal.hide();
 
     let mensaje = 'Descargando app para ';
 
@@ -46,16 +53,26 @@ async function descargarApp() {
         break;
     }
     contador_intentos++;
-    alert(mensaje);
+    await Swal.fire({
+      icon: 'info',
+      title: 'Información',
+      text: mensaje,
+    });
   }
 }
 
-function selectOption(option) {
-  selectedOption = option;
-  const modal = bootstrap.Modal.getInstance(
-    document.getElementById('downloadModal')
-  );
-  modal.hide();
+function esperandoSeleccion() {
+  const buttons = document.querySelectorAll('#downloadModal button');
+  return new Promise((resolve) => {
+    buttons.forEach((button) => {
+      button.addEventListener('click', function handleClick(event) {
+        const option = parseInt(event.target.dataset.option, 10);
+        selectedOption = option;
+        buttons.forEach((btn) => btn.removeEventListener('click', handleClick));
+        resolve(option);
+      });
+    });
+  });
 }
 
 function suscribirseAlNewsletter() {
@@ -64,7 +81,11 @@ function suscribirseAlNewsletter() {
     let email = prompt('Ingrese su email');
     if (email) {
       localStorage.setItem('email', email);
-      alert('Gracias por suscribirse a nuestro newsletter');
+      Swal.fire({
+        icon: 'success',
+        title: 'Gracias por suscribirse a nuestro newsletter',
+        text: mensaje,
+      });
     }
   }
 }
@@ -87,10 +108,12 @@ function mostrarPreguntasFrecuentes() {
         'Para cargar kilómetros debes dirigirte a la opción de "Cargar Kilómetros", ingresar la cantidad y seleccionar un modo de pago.',
     },
   ];
-  let html = 'PREGUNTAS FRECUENTES </br>';
-  for (let i = 0; i < preguntas.length; i++) {
-    html += '<h3>' + preguntas[i].pregunta + '</h3>';
-    html += '<p>' + preguntas[i].respuesta + '</p></br>';
-  }
-  alert(html);
+  const html = preguntas
+    .map((item) => `<h3>${item.pregunta}</h3><p>${item.respuesta}</p></br>`)
+    .join('');
+  Swal.fire({
+    icon: 'info',
+    title: 'PREGUNTAS FRECUENTES',
+    html: html,
+  });
 }
