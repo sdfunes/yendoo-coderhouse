@@ -75,18 +75,87 @@ function esperandoSeleccion() {
   });
 }
 
+function showConfirmationModal(message) {
+  return new Promise((resolve) => {
+    const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+    const modalBody = document.querySelector('#confirmationModal .modal-body');
+    const confirmButton = document.querySelector('#confirmationModal .btn-confirm');
+    const cancelButton = document.querySelector('#confirmationModal .btn-cancel');
+
+    modalBody.textContent = message;
+
+    const handleConfirm = () => {
+      resolve(true);
+      cleanup();
+    };
+
+    const handleCancel = () => {
+      resolve(false);
+      cleanup();
+    };
+
+    const cleanup = () => {
+      confirmButton.removeEventListener('click', handleConfirm);
+      cancelButton.removeEventListener('click', handleCancel);
+      modal.hide();
+    };
+
+    confirmButton.addEventListener('click', handleConfirm);
+    cancelButton.addEventListener('click', handleCancel);
+
+    modal.show();
+  });
+}
+
+function showInputModal(message) {
+  return new Promise((resolve) => {
+    const modal = new bootstrap.Modal(document.getElementById('inputModal'));
+    const inputField = document.querySelector('#inputModalInput');
+    const confirmButton = document.querySelector('#inputModal .btn-confirm');
+    const cancelButton = document.querySelector('#inputModal .btn-cancel');
+
+    inputField.value = '';
+
+    const handleConfirm = () => {
+      resolve(inputField.value);
+      cleanup();
+    };
+
+    const handleCancel = () => {
+      resolve(null);
+      cleanup();
+    };
+
+    const cleanup = () => {
+      confirmButton.removeEventListener('click', handleConfirm);
+      cancelButton.removeEventListener('click', handleCancel);
+      modal.hide();
+    };
+
+    confirmButton.addEventListener('click', handleConfirm);
+    cancelButton.addEventListener('click', handleCancel);
+
+    modal.show();
+  });
+}
+
 function suscribirseAlNewsletter() {
   const emailGuardado = localStorage.getItem('email');
-  if (!emailGuardado && confirm('¿Desea suscribirse a nuestro newsletter?')) {
-    let email = prompt('Ingrese su email');
-    if (email) {
-      localStorage.setItem('email', email);
-      Swal.fire({
-        icon: 'success',
-        title: 'Gracias por suscribirse a nuestro newsletter',
-        text: mensaje,
-      });
-    }
+  if (!emailGuardado) {
+    showConfirmationModal('¿Desea suscribirse a nuestro newsletter?').then((confirmed) => {
+      if (confirmed) {
+        showInputModal('Ingrese su email').then((email) => {
+          if (email) {
+            localStorage.setItem('email', email);
+            Swal.fire({
+              icon: 'success',
+              title: 'Gracias por suscribirse a nuestro newsletter',
+              text: 'Se ha registrado correctamente.',
+            });
+          }
+        });
+      }
+    });
   }
 }
 

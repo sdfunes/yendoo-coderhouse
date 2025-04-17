@@ -1,0 +1,42 @@
+[
+    {
+        "fecha": "2025-04-16",
+        "hora": "07:30:14",
+        "origen": "San Telmo",
+        "destino": "Retiro",
+        "usuario": "5",
+        "transporte": "1"
+    },
+    {
+        "fecha": "2025-04-16",
+        "hora": "16:50:36",
+        "origen": "Retiro",
+        "destino": "San Telmo",
+        "usuario": "5",
+        "transporte": "2"
+    },
+    {
+        "fecha": "2025-04-17",
+        "hora": "06:35:01",
+        "origen": "Constitucion",
+        "destino": "Avenida de Mayo",
+        "usuario": "5",
+        "transporte": "3"
+    },
+	{
+        "fecha": "2025-04-17",
+        "hora": "16:45:25",
+        "origen": "Avenida de Mayo",
+        "destino": "Constitucion",
+        "usuario": "5",
+        "transporte": "1"
+    },
+	{
+        "fecha": "2025-04-18",
+        "hora": "06:45:10",
+        "origen": "Caballito",
+        "destino": "Once",
+        "usuario": "5",
+        "transporte": "1"
+    }
+]

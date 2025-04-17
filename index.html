@@ -35,7 +35,11 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script type="module" src="./assets/js/index.js" crossorigin="anonymous"></script>
+    <script
+      type="module"
+      src="./assets/js/index.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Yendoo APP | Billetera Virtual de Viajes</title>
   </head>
   <body class="fondo-principal">
@@ -151,6 +155,85 @@
                   </button>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="confirmationModal"
+        tabindex="-1"
+        aria-labelledby="confirmationModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmationModalLabel">
+                Confirmación
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary btn-cancel"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-primary btn-confirm">
+                Aceptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="inputModal"
+        tabindex="-1"
+        aria-labelledby="inputModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="inputModalLabel">
+                Ingrese su Email
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <input
+                type="text"
+                id="inputModalInput"
+                class="form-control"
+                placeholder="Email"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary btn-cancel"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-primary btn-confirm">
+                Aceptar
+              </button>
             </div>
           </div>
         </div>
