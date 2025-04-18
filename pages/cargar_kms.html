@@ -14,6 +14,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <script
+      async
+      src="../assets/js/cargar_kms.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Yendoo APP | Cargar Kilómetros para viajar</title>
   </head>
   <body>
@@ -64,25 +69,90 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <label style="color:white" for="kmsInput">Kilómetros a cargar:</label>
+            <label style="color: white" for="kmsInput"
+              >Kilómetros a cargar:</label
+            >
             <div class="input-group">
               <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary" type="button">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  onclick="decrementKms()"
+                >
                   <i class="fas fa-minus"></i>
                 </button>
               </div>
-              <input type="text" id="kmsInput" class="form-control" maxlength="3" value="0" />
+              <input
+                type="text"
+                id="kmsInput"
+                class="form-control"
+                maxlength="3"
+                value="0"
+                oninput="validateKmsInput()"
+              />
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  onclick="incrementKms()"
+                >
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="confirmModal"
+        tabindex="-1"
+        aria-labelledby="confirmModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmModalLabel">
+                Confirmar Carga
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              ¿Estás seguro de que deseas cargar los kilómetros ingresados?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="submitKms()"
+              >
+                Confirmar
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-group row align-items-center acciones">
         <div class="col-6 col-md-9 text-center text-md-right">
-          <button type="submit" class="btn login-btn btn-info w-50 m-0">
+          <button
+            type="button"
+            class="btn login-btn btn-info w-50 m-0"
+            data-bs-toggle="modal"
+            data-bs-target="#confirmModal"
+          >
             Cargar
           </button>
         </div>
@@ -162,5 +232,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
